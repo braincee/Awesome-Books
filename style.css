@@ -32,8 +32,8 @@ main {
 }
 
 .btn-remove {
-  color: #fff;
-  background-color: #ff0000;
+  color: white;
+  background-color: red;
   height: 35px;
   outline: none;
   border: none;
@@ -43,7 +43,6 @@ main {
 .lib-catalogue {
   display: flex;
   flex-direction: column;
-  border: 1px solid #008000;
   padding: 15px;
 }
 
