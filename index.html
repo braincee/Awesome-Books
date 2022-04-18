@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Awesome Books</title>
-</head>
-<body>
-  <main>
-    <section>
-      <h2>Awesome Books</h2>
-      <div class="lib-catalogue">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Awesome Books</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <section>
+          <h2>Awesome Books</h2>
+          <div class="lib-catalogue"></div>
+        </section>
+        <section>
+          <h4>Add a Book</h4>
+          <form action="#" method="Post" class="form-input">
+            <input type="text" name="title" placeholder="Title" />
+            <input type="text" name="author" placeholder="Author" />
+            <button type="button" id="add-btn">Add</button>
+          </form>
+        </section>
       </div>
-
-    </section>
-    <section>
-    <h4>Add a Book</h4>
-    <form action="#" method="Post" class="form-input">
-      <input type="text" name="title" placeholder="Title">
-      <input type="text" name="author" placeholder="Author">
-      <button type="button" id="add-btn">Add</button>
-    </form>
-  </section>
-  </main>
-  <script src="features/features.js"></script>
-</body>
+    </main>
+    <script src="features/features.js"></script>
+  </body>
 </html>
