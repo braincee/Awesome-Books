@@ -4,6 +4,7 @@
 
 > The website has a collection of books with the Title and Author Name with a form to add books with title and author inputs and a button to remove a book.
 
+## Live Demo
 
 ## Built With
 
@@ -11,10 +12,9 @@
 - Javascript
 - CSS
 
-
 To get a local copy up and running follow these simple example steps.
 
-1. Clone Repository 
+1. Clone Repository
    ```
    git clone git@github.com:https://github.com/braincee/Awesome-Books.git
    ```
@@ -34,21 +34,18 @@ To get a local copy up and running follow these simple example steps.
    npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
    ```
 
-
 ## Authors
 
-👤 **Solomon Hagan**
+👤 **Stephen**
 
 - GitHub: [@braincee](https://github.com/braincee)
 - Twitter: [@annor0543](https://twitter.com/annor0543)
 - LinkedIn: [Stephen Annor](https://www.linkedin.com/in/kwesi-appiah-1387801a1/)
 
+👤 **JODRACK**
 
-👤 ****
-
-- GitHub: []()
-- Twitter: []()
-- LinkedIn: []()
+- GitHub: [@joseph07-drack](https://github.com/joseph07-drack)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/joseph-buingo-ab2682225/)
 
 ## 🤝 Contributing
 
