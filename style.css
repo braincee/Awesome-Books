@@ -1,0 +1,67 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+  width: 100%;
+}
+
+.container {
+  width: 60%;
+  border: solid 2px #008000;
+  border-radius: 5px;
+  margin: 10px auto;
+  padding: 15px;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  gap: 15px;
+}
+
+#add-btn {
+  outline: none;
+  border: none;
+  width: 50%;
+  margin: 0 auto;
+  padding: 8px;
+  color: #fff;
+  background-color: #008000;
+}
+
+.btn-remove {
+  color: white;
+  background-color: red;
+  height: 35px;
+  outline: none;
+  border: none;
+  padding: 8px;
+}
+
+.lib-catalogue {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.single-book {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
+
+.title,
+.author {
+  font-size: 16px;
+}
+
+.author-name {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
