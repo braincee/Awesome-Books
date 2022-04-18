@@ -1,0 +1,11 @@
+main {
+  width: 100%;
+}
+
+.container {
+  width: 60%;
+  border: solid 2px dodgerblue;
+  border-radius: 5px;
+  margin: 10px auto;
+  padding: 15px;
+}
