@@ -32,10 +32,7 @@ const saveBook = () => {
   if (savedBooks === null) savedBooks = [];
   const title = form.elements.title.value;
   const author = form.elements.author.value;
-  const book = {
-    title,
-    author,
-  };
+  const book = {title,author, };
   savedBooks.push(book);
   window.localStorage.setItem('booksKeeper', JSON.stringify(savedBooks));
   newBook(book);
