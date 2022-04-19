@@ -7,10 +7,18 @@ main {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   border: solid 2px #008000;
   border-radius: 5px;
   margin: 10px auto;
-  padding: 15px;
+  padding: 0 15px;
+  gap: 10px;
+  width: 60%;
+}
+
+#add-button {
+  width: 50px;
 }
 
 .container h1 {
@@ -30,18 +38,6 @@ form {
   gap: 15px;
 }
 
-#add-btn {
-  display: flex;
-  align-self: flex-end;
-  outline: none;
-  border: none;
-  width: 20%;
-  margin: 0 auto;
-  padding: 8px;
-  color: #fff;
-  background-color: #008000;
-}
-
 .btn-remove {
   color: white;
   background-color: red;
@@ -57,11 +53,17 @@ form {
   padding: 15px;
 }
 
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
 .single-book {
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  align-items: center;
 }
 
 .title,
@@ -77,9 +79,7 @@ form {
   font-weight: 600;
 }
 
-hr {
-  width: 30%;
-  margin: 30px auto;
-  color: gray;
-  font-weight: 900;
+.form-input button {
+  display: flex;
+  align-self: flex-end;
 }

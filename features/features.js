@@ -57,7 +57,7 @@ class DisplayPage {
     const authorSection = document.createElement('div');
     authorSection.className = 'author-name';
     const span = document.createElement('span');
-    span.textContent = 'By';
+    span.textContent = 'by';
     const bookTitle = document.createElement('h6');
     bookTitle.className = 'title';
     const bookAuthor = document.createElement('h6');
