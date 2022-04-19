@@ -19,17 +19,17 @@ To get a local copy up and running follow these simple example steps.
    git clone git@github.com:https://github.com/braincee/Awesome-Books.git
    ```
 
-### Install
+### Install linters(webhint, stylelint, eslint)
 
-1. Run
+1. Run to install webhint
    ```
    npm install --save-dev hint@6.x
    ```
-2. Run
+2. Run to install stylelint
    ```
    npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
    ```
-3. Run
+3. Run to install eslint
    ```
    npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
    ```
