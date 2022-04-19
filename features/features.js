@@ -22,15 +22,14 @@ class Storage {
       books = JSON.parse(localStorage.getItem('booksKeeper'));
     }
     return books;
-  }
+  };
 
   saveBook = (book) => {
     const books = this.getBooks();
 
     books.push(book);
     localStorage.setItem('booksKeeper', JSON.stringify(books));
-  }
-  /* deleting the book */
+  };
 
   deleteBook = (button) => {
     const books = this.getBooks();
@@ -39,7 +38,7 @@ class Storage {
     const myAuthor = divTag.querySelector('.author').textContent;
     const remainBooks = books.filter((book) => book.title !== myTitle && book.author !== myAuthor);
     localStorage.setItem('booksKeeper', JSON.stringify(remainBooks));
-  }
+  };
 }
 
 class DisplayPage {
@@ -49,43 +48,43 @@ class DisplayPage {
     books.forEach((book) => {
       this.newBook(book);
     });
-  }
+  };
 
-newBook = (book) => {
-  const booksCatalogue = document.querySelector('.lib-catalogue');
-  const bookCatalogue = document.createElement('div');
-  bookCatalogue.className = 'single-book';
-  const authorSection = document.createElement('div');
-  authorSection.className = 'author-name';
-  const span = document.createElement('span');
-  span.textContent = 'By';
-  const bookTitle = document.createElement('h6');
-  bookTitle.className = 'title';
-  const bookAuthor = document.createElement('h6');
-  bookAuthor.className = 'author';
-  const buttonRemove = document.createElement('button');
-  buttonRemove.className = 'btn-remove';
-  buttonRemove.textContent = 'Remove';
-  bookTitle.textContent = book.title;
-  bookAuthor.textContent = book.author;
-  authorSection.append(bookTitle, span, bookAuthor);
-  bookCatalogue.append(authorSection, buttonRemove);
-  booksCatalogue.appendChild(bookCatalogue);
-}
+  newBook = (book) => {
+    const booksCatalogue = document.querySelector('.lib-catalogue');
+    const bookCatalogue = document.createElement('div');
+    bookCatalogue.className = 'single-book';
+    const authorSection = document.createElement('div');
+    authorSection.className = 'author-name';
+    const span = document.createElement('span');
+    span.textContent = 'By';
+    const bookTitle = document.createElement('h6');
+    bookTitle.className = 'title';
+    const bookAuthor = document.createElement('h6');
+    bookAuthor.className = 'author';
+    const buttonRemove = document.createElement('button');
+    buttonRemove.className = 'btn-remove';
+    buttonRemove.textContent = 'Remove';
+    bookTitle.textContent = book.title;
+    bookAuthor.textContent = book.author;
+    authorSection.append(bookTitle, span, bookAuthor);
+    bookCatalogue.append(authorSection, buttonRemove);
+    booksCatalogue.appendChild(bookCatalogue);
+  };
 
- saveBook = (book) => {
-   this.newBook(book);
- }
+  saveBook = (book) => {
+    this.newBook(book);
+  };
 
- deleteBook = (button) => {
-   const divTag = button.parentNode;
-   divTag.remove();
- }
+  deleteBook = (button) => {
+    const divTag = button.parentNode;
+    divTag.remove();
+  };
 
- clearForm = () => {
-   form.elements.title.value = '';
-   form.elements.author.value = '';
- }
+  clearForm = () => {
+    form.elements.title.value = '';
+    form.elements.author.value = '';
+  };
 }
 
 /* displaying the UI */
