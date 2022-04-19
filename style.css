@@ -7,28 +7,35 @@ main {
 }
 
 .container {
-  width: 60%;
+  display: flex;
+  flex-direction: column;
   border: solid 2px #008000;
   border-radius: 5px;
   margin: 10px auto;
-  padding: 15px;
+  padding: 0 15px;
+  gap: 10px;
+  width: 60%;
+}
+
+#add-button {
+  width: 50px;
+}
+
+.container h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+form {
+  margin: 0 auto;
 }
 
 .form-input {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 40%;
   gap: 15px;
-}
-
-#add-btn {
-  outline: none;
-  border: none;
-  width: 50%;
-  margin: 0 auto;
-  padding: 8px;
-  color: #fff;
-  background-color: #008000;
 }
 
 .btn-remove {
@@ -46,11 +53,17 @@ main {
   padding: 15px;
 }
 
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
 .single-book {
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  align-items: center;
 }
 
 .title,
@@ -64,4 +77,9 @@ main {
   justify-content: center;
   align-items: center;
   font-weight: 600;
+}
+
+.form-input button {
+  display: flex;
+  align-self: flex-end;
 }
