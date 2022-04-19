@@ -26,21 +26,23 @@ class Storage {
 
   saveBook = (book) => {
     const books = this.getBooks();
+
     books.push(book);
     localStorage.setItem('booksKeeper', JSON.stringify(books));
   }
+  /* deleting the book */
 
   deleteBook = (button) => {
     const books = this.getBooks();
     const divTag = button.parentNode;
-    const myTitle = divTag.querySelector('title').textContent;
-    const myAuthor = divTag.querySelector('author').textContent;
+    const myTitle = divTag.querySelector('.title').textContent;
+    const myAuthor = divTag.querySelector('.author').textContent;
     const remainBooks = books.filter((book) => book.title !== myTitle && book.author !== myAuthor);
     localStorage.setItem('booksKeeper', JSON.stringify(remainBooks));
   }
 }
 
-class displayPage {
+class DisplayPage {
   addingBooks = () => {
     const storage = new Storage();
     const books = storage.getBooks();
@@ -50,6 +52,7 @@ class displayPage {
   }
 
 newBook = (book) => {
+  const booksCatalogue = document.querySelector('.lib-catalogue');
   const bookCatalogue = document.createElement('div');
   bookCatalogue.className = 'single-book';
   const authorSection = document.createElement('div');
@@ -68,7 +71,7 @@ newBook = (book) => {
   authorSection.append(bookTitle, span, bookAuthor);
   bookCatalogue.append(authorSection, buttonRemove);
   booksCatalogue.appendChild(bookCatalogue);
- } 
+}
 
  saveBook = (book) => {
    this.newBook(book);
@@ -86,7 +89,7 @@ newBook = (book) => {
 }
 
 /* displaying the UI */
-const displayContent = new displayPage();
+const displayContent = new DisplayPage();
 const storage = new Storage();
 document.addEventListener('DOMContentLoaded', displayContent.addingBooks());
 
@@ -109,46 +112,3 @@ document.addEventListener('click', (e) => {
     storage.deleteBook(button);
   }
 });
-
-// const saveBook = () => {
-//   let savedBooks = JSON.parse(window.localStorage.getItem('booksKeeper'));
-//   if (savedBooks === null) savedBooks = [];
-//   const title = form.elements.title.value;
-//   const author = form.elements.author.value;
-//   const book = {
-//     title,
-//     author,
-//   };
-//   savedBooks.push(book);
-//   window.localStorage.setItem('booksKeeper', JSON.stringify(savedBooks));
-//   newBook(book);
-// };
-
-// const addingBooks = () => {
-//   const books = JSON.parse(window.localStorage.getItem('booksKeeper'));
-//   if (localStorage.getItem('booksKeeper')) {
-//     books.forEach((book) => {
-//       newBook(book);
-//     });
-//   }
-// };
-
-// window.onload = addingBooks;
-
-// addButton.addEventListener('click', () => {
-//   saveBook();
-//   form.elements.title.value = '';
-//   form.elements.author.value = '';
-// });
-
-// const deleteBook = (button) => {
-//   const FormerBooks = JSON.parse(window.localStorage.getItem('booksKeeper'));
-//   const divTag = button.parentNode;
-//   const myTitle = divTag.querySelector('.title').textContent;
-//   const myAuthor = divTag.querySelector('.author').textContent;
-//   const remainBooks = FormerBooks.filter((book) => book.title !== myTitle
-//    && book.author !== myAuthor);
-//   window.localStorage.setItem('booksKeeper', JSON.stringify(remainBooks));
-
-//   divTag.remove();
-// };
