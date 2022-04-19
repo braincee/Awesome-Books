@@ -7,24 +7,35 @@ main {
 }
 
 .container {
-  width: 60%;
   border: solid 2px #008000;
   border-radius: 5px;
   margin: 10px auto;
   padding: 15px;
 }
 
+.container h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+form {
+  margin: 0 auto;
+}
+
 .form-input {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 40%;
   gap: 15px;
 }
 
 #add-btn {
+  display: flex;
+  align-self: flex-end;
   outline: none;
   border: none;
-  width: 50%;
+  width: 20%;
   margin: 0 auto;
   padding: 8px;
   color: #fff;
@@ -64,4 +75,11 @@ main {
   justify-content: center;
   align-items: center;
   font-weight: 600;
+}
+
+hr {
+  width: 30%;
+  margin: 30px auto;
+  color: gray;
+  font-weight: 900;
 }
