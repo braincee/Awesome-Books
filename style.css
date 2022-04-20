@@ -1,56 +1,74 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-main {
-  width: 100%;
-}
-
-.container {
+.form-input {
   display: flex;
   flex-direction: column;
-  border: solid 2px #008000;
-  border-radius: 5px;
-  margin: 10px auto;
-  padding: 0 15px;
-  gap: 10px;
-  width: 60%;
+  gap: 20px;
+  width: 50%;
 }
 
 #add-button {
   width: 50px;
 }
 
-.container h1 {
-  text-align: center;
-  font-weight: 700;
-  font-size: 14px;
+h6 {
+  margin: 0;
+  padding: 0;
 }
 
-form {
-  margin: 0 auto;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: aliceblue;
 }
 
-.form-input {
+main {
   display: flex;
   flex-direction: column;
-  width: 40%;
-  gap: 15px;
+  gap: 20px;
 }
 
-.btn-remove {
-  color: white;
-  background-color: red;
-  height: 35px;
-  outline: none;
-  border: none;
-  padding: 8px;
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 10%;
 }
 
 .lib-catalogue {
   display: flex;
   flex-direction: column;
-  padding: 15px;
+  border: 2px solid rgb(46, 173, 29);
+  padding: 10px;
+  font-weight: 700;
+}
+
+.single-book {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.title,
+.author {
+  font-size: 16px;
+}
+
+.single-book:nth-child(odd) {
+  background: #b3ecab;
+}
+
+.author-name {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-remove {
+  color: white;
+  background-color: red;
+  outline: none;
+  border: none;
 }
 
 .form-container {
@@ -60,26 +78,123 @@ form {
   padding: 5px;
 }
 
-.single-book {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-}
-
-.title,
-.author {
-  font-size: 16px;
-}
-
-.author-name {
-  display: flex;
-  gap: 3px;
-  justify-content: center;
-  align-items: center;
-  font-weight: 600;
+.form-input input {
+  border: 2px solid black;
+  height: 20px;
 }
 
 .form-input button {
   display: flex;
   align-self: flex-end;
+}
+
+.container h1 {
+  text-align: center;
+}
+
+.list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar {
+  margin: 4%;
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  border: 2.5px solid rgb(230, 233, 67);
+  box-shadow: 3px 3px rgb(115, 212, 91);
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  margin-left: 16px;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin-right: 16px;
+}
+
+.nav-list {
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.nav-link {
+  border-right: rgb(230, 233, 67);
+  padding: 0 10px;
+}
+
+.nav-link a {
+  color: rgb(75, 69, 69);
+  text-decoration: none;
+}
+
+.nav-link a:hover {
+  color: rgb(248, 232, 11);
+}
+
+.copyright {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  width: 92%;
+  margin: 2% 4%;
+  border: rgb(230, 233, 67);
+  position: absolute;
+  bottom: 0;
+  box-shadow: 3px 3px rgb(115, 212, 91);
+}
+
+.footer-p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  margin-right: 5%;
+}
+
+/* .copyright img {
+  width: 140px;
+} */
+
+img {
+  max-width: 80px;
+}
+
+.contact {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-list {
+  padding-right: 2%;
+  border: 2.5px solid black;
+  box-shadow: 3px 3px rgb(115, 212, 91);
+}
+
+.date-time {
+  position: absolute;
+  top: 7.5rem;
+  right: 3.2rem;
+  font-size: 16px;
+  font-weight: 700;
 }
