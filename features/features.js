@@ -36,9 +36,7 @@ class Storage {
     const divTag = button.parentNode;
     const myTitle = divTag.querySelector('.title').textContent;
     const myAuthor = divTag.querySelector('.author').textContent;
-    const remainBooks = books.filter(
-      (book) => book.title !== myTitle && book.author !== myAuthor
-    );
+    const remainBooks = books.filter((book) => book.title !== myTitle && book.author !== myAuthor);
     localStorage.setItem('booksKeeper', JSON.stringify(remainBooks));
   };
 }
