@@ -36,7 +36,9 @@ class Storage {
     const divTag = button.parentNode;
     const myTitle = divTag.querySelector('.title').textContent;
     const myAuthor = divTag.querySelector('.author').textContent;
-    const remainBooks = books.filter((book) => book.title !== myTitle && book.author !== myAuthor);
+    const remainBooks = books.filter(
+      (book) => book.title !== myTitle && book.author !== myAuthor
+    );
     localStorage.setItem('booksKeeper', JSON.stringify(remainBooks));
   };
 }
@@ -49,7 +51,7 @@ class DisplayPage {
       this.newBook(book);
     });
   };
-  
+
   /* creating a new Book */
   newBook = (book) => {
     const booksCatalogue = document.querySelector('.lib-catalogue');
@@ -92,6 +94,15 @@ class DisplayPage {
 const displayContent = new DisplayPage();
 const storage = new Storage();
 
+const saveInfo = document.querySelector('.form-container');
+const contactInfo = document.querySelector('.contact');
+const displayInfo = document.querySelector('.container');
+document.addEventListener('DOMContentLoaded', () => {
+  displayContent.addingBooks();
+  contactInfo.style.display = 'none';
+  saveInfo.style.display = 'none';
+});
+
 /* Adding a Book */
 const addButton = document.querySelector('#add-btn');
 addButton.addEventListener('click', () => {
@@ -103,7 +114,6 @@ addButton.addEventListener('click', () => {
   storage.saveBook(newBook);
   displayContent.clearForm();
 });
-
 
 /* removing a book */
 
@@ -126,3 +136,14 @@ document.addEventListener('click', (e) => {
     displayInfo.style.display = 'none';
   }
 });
+
+/* Displaying the current date and time */
+const dateTime = document.querySelector('#date-time');
+function getDate() {
+  const showDate = new Date();
+  const datetime = `Wednesday ${showDate.getDate()}th/${showDate.getMonth() + 1}
+  /${showDate.getFullYear()}, ${showDate.getHours()}:${showDate.getMinutes()}:
+  ${showDate.getSeconds()}`;
+  dateTime.innerHTML = datetime;
+}
+setInterval(getDate, 500);
